@@ -1,0 +1,29 @@
+{
+  "name": "books",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "server": "json-server --port 3001 --watch db.json --host 127.0.0.1"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.16",
+    "@mui/material": "^5.10.17",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-id-generator": "^3.0.2",
+    "react-router": "^6.4.5",
+    "react-router-dom": "^6.4.5"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
+    "vite": "^3.2.3"
+  }
+}

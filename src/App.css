@@ -1,0 +1,241 @@
+@import url('https://fonts.cdnfonts.com/css/formula-condensed');
+:root{
+  --secondarycolor:#041D34;
+  --primarycolor:#D9E2E8;
+  --book-container:#EBCAC2;
+}
+
+html , body , #root {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: center;
+  overflow-x: hidden;
+  text-transform: capitalize;
+  font-family: 'Formula Condensed', sans-serif;
+}
+
+.App {
+  width:100%;
+  min-height: 100%;
+  background: var(--secondarycolor);
+  color: var(--primarycolor);
+  display: flex;
+  flex-direction: row;
+}
+
+.logo{
+  padding-bottom: 50px;
+  border-radius: 1rem;
+}
+
+.logo .css-i4bv87-MuiSvgIcon-root{
+  fill: var(--primarycolor)!important;
+  font-size:6.5rem!important;
+}
+
+
+.side-toggle {
+  height: 10%;
+  background: transparent;
+  border: 0;
+  position: absolute;
+  right: 1%;
+  z-index: 99;
+  color: var(--primarycolor);
+  cursor: pointer;
+}
+
+.sideBar-active{
+  padding:80px 30px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 4px 0px rgb(118, 118, 118);
+  color: var(--primarycolor);
+  animation:show_sideBar 1s forwards;
+}
+
+
+.sideBar-disable{
+  padding:80px 30px;
+  color: var(--primarycolor);
+  animation:hide_sideBar 1s forwards;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes hide_sideBar{
+  from{
+    width: 20%;
+  }
+  to{
+    width: 0%;
+    opacity: 0;
+  }
+}
+
+@keyframes show_sideBar{
+  from{
+    width:0%;
+  }
+  to{
+    width: 20%;
+  }
+}
+
+.sideBar-buttons {
+  padding: 10px;
+  margin: 10px;
+  background: var(--secondarycolor);
+  color: var(--primarycolor);
+  border: 1px solid var(--primarycolor);
+  border-radius: .6rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.sideBar-buttons:hover {
+    animation: button_hover 1s forwards;
+}
+
+@keyframes button_hover {
+  to{
+    box-shadow: -180px 0px 0px 0px  var(--primarycolor) inset;
+    color: var(--secondarycolor);
+  }
+}
+
+.form-input{
+  padding: 50px;
+  width: 100% ;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.form-input h1{
+  text-align: left;
+  font-size: 4rem;
+}
+
+.form-input button {
+  width: 30%;
+  padding: 10px;
+  margin: 10px;
+  cursor: pointer;
+  background: var(--secondarycolor);
+  color: var(--primarycolor);
+  border: 1px solid var(--primarycolor);
+  border-radius: .6rem;
+}
+
+.form-input button:hover {
+  animation: addbutton_hover 1s forwards;
+}
+
+@keyframes addbutton_hover {
+  to{
+    box-shadow: 310px 0px 0px 1px var(--primarycolor) inset;
+    color: var(--secondarycolor);
+  }
+}
+
+.form-input input {
+  padding: 10px;
+  border-radius:.7rem;
+  border: 0;
+}
+
+.form_inputs{
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.css-i4bv87-MuiSvgIcon-root {
+  fill: var(--primarycolor)!important;
+  font-size: 2.5rem !important;
+}
+
+.list-empty h1{
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.list-empty p{
+  font-size: .7rem;
+}
+
+.list-empty{
+  grid-column:span 3;
+  grid-row: span 3;
+}
+
+.books-list{
+  height: 100%;
+  padding:25px 50px;
+  width: 100%;  
+  display: grid;
+  gap: 20px;
+  margin: 0;
+}
+
+.list_title{
+  text-align: left;
+  grid-column: span 4;
+  margin: 0;
+}
+
+.book-container{
+  display: flex;
+  flex-direction:column;
+  height: 150px;
+  width: 130px;
+  border-radius: .4rem;
+  box-shadow:0px 0px 2px 0px rgb(255, 255, 255)  ;
+  background: var(--book-container);
+  color: var(--secondarycolor);
+}
+
+.input-edit{
+  margin-top: 10px;
+  padding: 10px;
+  width: 80%;
+}
+
+.btn-saveEdit{
+  margin-top: 10px;
+  padding: 10px;
+  background: var(--secondarycolor);
+  color: var(--primarycolor);
+  border: 1px solid var(--primarycolor);
+  border-radius: .3rem;
+}
+
+.btn-saveEdit:hover{
+  animation:button_hover .8s forwards;
+}
+
+
+.book-actions{
+  text-align: right;
+  padding: 5px;
+}
+
+.btn-deltet , .btn-edit{
+  margin-left: 5px;
+  font-size: .8rem;
+  box-shadow: 0px 0px 1px 0px var(--secondarycolor);
+  border-radius: .2rem;
+  background: #54555566;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+}
+.btn-deltet:hover , .btn-edit:hover{
+  background: #D9E2E8;
+  color:#041D34;
+}
+
