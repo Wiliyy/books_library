@@ -55,7 +55,36 @@ html , body , #root {
   animation:show_sideBar 1s forwards;
 }
 
+@media screen and (max-width: 768px){
+  .sideBar-active{
+    padding: 80px 20px;
+    position: fixed;
+    right: 0;
+    background-color: var(--secondarycolor);
+    height: 100%;
+  }
+  .sideBar-disable{
+    padding: 80px 20px;
+    position: fixed;
+    right: 0;
+    background-color: var(--secondarycolor);
+    height: 100%;
+  }
+  .books-list{
+    padding: 25px 10px!important;
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .form-input{
+    padding: 10px!important;
+  }
+  .list_title{
+    grid-column: span 2 !important;
+  }
+}
 
+.created_alert{
+  width:25px;
+}
 .sideBar-disable{
   padding:80px 30px;
   color: var(--primarycolor);
@@ -67,7 +96,7 @@ html , body , #root {
 
 @keyframes hide_sideBar{
   from{
-    width: 20%;
+    width: 25%;
   }
   to{
     width: 0%;
@@ -80,7 +109,7 @@ html , body , #root {
     width:0%;
   }
   to{
-    width: 20%;
+    width: 25%;
   }
 }
 
@@ -101,7 +130,7 @@ html , body , #root {
 
 @keyframes button_hover {
   to{
-    box-shadow: -180px 0px 0px 0px  var(--primarycolor) inset;
+    box-shadow: -230px 0px 0px 0px  var(--primarycolor) inset;
     color: var(--secondarycolor);
   }
 }
@@ -183,13 +212,14 @@ html , body , #root {
   padding:25px 50px;
   width: 100%;  
   display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr auto;
   gap: 20px;
   margin: 0;
 }
 
 .list_title{
   text-align: left;
-  grid-column: span 4;
+  grid-column: span 5;
   margin: 0;
 }
 

@@ -26,7 +26,9 @@ const CreateBook = () => {
         <h1>write book title </h1>
         <div className="form_inputs">
             <input onChange={handlechange} value={value} type="text" />
-            { alert !=0 && <img src={alert} width="3%"/> }
+            {
+             alert !=0 && 
+            <img className="created_alert" src={alert} /> }
             <button>create</button>
         </div>
     </form>
