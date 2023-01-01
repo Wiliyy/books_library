@@ -27,16 +27,16 @@ function App() {
           <Route exact path="/addBook" element={<CreateBook /> } />
         </Routes>
         <button className="side-toggle" onClick={hanldeside}>
-          { sideopen ==0 ? <MoreHorizOutlinedIcon/> : <CloseOutlinedIcon/> }
+          { sideopen ==0 ? <CloseOutlinedIcon/> : <MoreHorizOutlinedIcon/>  }
         </button>
-        <div className={sideopen?"sideBar-active":"sideBar-disable"}  >
+        <div className={sideopen?"sideBar-disable":"sideBar-active"}  >
           <div className="logo">
             <LocalLibraryIcon/>
           </div>
-          <Link to={'/addBook'} className="sideBar-buttons">
+          <Link onClick={hanldeside} to={'/addBook'} className="sideBar-buttons">
             <butoon >add book</butoon>
           </Link>
-          <Link to={'/'} className="sideBar-buttons">
+          <Link onClick={hanldeside} to={'/'} className="sideBar-buttons">
             <butoon >book library</butoon>
           </Link>
         </div>

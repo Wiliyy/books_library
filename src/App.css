@@ -70,21 +70,26 @@ html , body , #root {
     background-color: var(--secondarycolor);
     height: 100%;
   }
+
   .books-list{
     padding: 25px 10px!important;
     grid-template-columns: 1fr 1fr !important;
   }
+
   .form-input{
     padding: 10px!important;
   }
+
   .list_title{
     grid-column: span 2 !important;
   }
+  
 }
 
 .created_alert{
   width:25px;
 }
+
 .sideBar-disable{
   padding:80px 30px;
   color: var(--primarycolor);
